@@ -1,0 +1,517 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    background-color: #FFFBFF ;
+}
+
+/***** GLOBAL STYLES ******/
+
+.btn1{
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    width: 10vh;
+    height: 3vh;
+    color: #292f36;
+    background-color: transparent;
+    border: 1px solid #292f36;
+    border-radius: 3px;
+}
+
+.btn1:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    background-color: #638475;
+    color: #FFFBFF;
+    border: 1px solid #292f36;
+}
+
+.btn2{
+    width: 8vh;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #292f36;
+    background-color: #EAC9C1;
+    padding:  1rem;
+    border-radius: 5px;
+}
+
+.btn2:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    background: #292f36;
+    color: #EAC9C1;
+
+}
+
+
+
+.highlight{
+    color: #638475;
+    font-weight: 600;
+}
+
+
+/**** Header *****/
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: #EBD8D0;
+    border-bottom: #292f36 solid 1px;
+    
+}
+
+.socials a{
+    color: #292f36;
+    text-shadow: 3px 3px 3px #EAC9C1;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+}
+
+.socials{
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+    text-align: center;
+}
+
+.socials a:hover{
+    color: #638475;
+    text-shadow: 3px 3px 3px #292f36;
+    transform: scale(0.9);
+}
+
+.NameLogo h1{
+    text-align: center;
+    font-weight: 200;
+    text-shadow:3px 3px 3px #EAC9C1;
+}
+
+.NameLogo{
+    background-color: #FFFBFF;
+    border-left: 1px solid #292f36;
+    border-right: 1px solid #292f36;
+}
+
+
+.Login-Chart{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.Login-Chart .btn1{
+    margin: 0 1rem;
+}
+/*** nav *****/
+
+nav{
+    
+    text-align: center;
+    margin-top: 2rem;
+}
+
+nav ul li{
+    display: inline;
+    text-align: center;
+    padding: 5rem;
+}
+
+nav ul li a{
+    color: #292f36;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover{
+    color: #638475;
+}
+/***** Display *****/
+
+.Display, .slide-content, #slider{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80vh;
+    overflow-x: hidden;
+}
+
+.Display{
+    position: relative;
+}
+
+.slide{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1{background-image: url('../Recursos/Imgs/IndexDisplayImages/cheese-cake-with-strawberry-fruit-1098592.jpg');}
+.slide2{background-image: url('../Recursos/Imgs/IndexDisplayImages/chocolate-with-milted-chocolate-on-white-ceramic-plate-45202.jpg');}
+.slide3{background-image: url('../Recursos/Imgs/IndexDisplayImages/donuts-and-bagel-display-205961.jpg');}
+
+
+.slide1::after, .slide2::after, .slide3::after{
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 5rem;
+    color: #FFFBFF;
+    text-shadow: #638475 2px 2px 2px ;
+    z-index: 100;
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: 3%;
+    font-size: 2rem;
+    color: #638475;
+    width: 0;
+    height: 0;
+}
+
+
+#arrow-left {
+    left: 0;
+    margin-left: 10px;
+    z-index: 100;
+}
+
+#arrow-right {
+    
+    right: 0;
+    margin-right: 40px;
+}
+
+/****** Presentation ******/
+
+.Presentation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+ .Stores, .Products, .Delivery{
+    border: 1px #638475 solid;
+    margin: auto;
+    display: grid;
+    grid-gap: 0.2rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    color: #292f36;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 3rem;
+}
+
+.Stores, .Delivery{
+      grid-template-columns: 1fr 2fr;
+      justify-content: left;
+      
+}
+
+.Products{
+    grid-template-columns: 2fr 1fr;
+    margin-right:4rem ;
+}
+
+
+.Stores .box , .Delivery .box, .Products > div p{
+    margin-left: 4rem;
+}
+
+.Stores > div p, .Delivery > div p, .Products .box{
+    margin-top: 10rem;
+    margin-right: 4rem;
+}
+
+
+.Stores img, .Products img, .Delivery img{
+    width: 80%;
+    
+}
+
+.Products .btn2{
+    margin-left: 4rem;
+}
+
+/******* insta gallery *****/
+
+
+.Gallery{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 0.5rem;
+    height: 25vh;
+    margin-left:5%;
+}
+
+.Gallery > div  img{
+    height: 25vh;
+    position: relative;
+}
+
+/* .Gallery > div img::after{
+    content: ' ';
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 1s;
+    position: absolute;
+    top: 0; left: 0;
+} */
+
+.instaGallery {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.instaGallery h3{
+    text-align: center;
+    font-size: 3rem;
+    color: #EAC9C1;
+    text-shadow: 1px 1px #638475;
+}
+
+footer{
+    text-align: center;
+    background-color: #EAC9C1;
+    margin: 0;
+    padding: 10px;
+    height: 5vh;
+}
+
+
+/***************** LOGIN **********************/
+
+.LoginContainer{
+    width: 100%;
+    height: 91.2vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.2rem;
+    
+}
+
+.LoginDisplay{
+    background-image: url('../Recursos/Imgs/longimgs/person-holding-box-with-pastries-3889842.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2rem;
+    color: #FFFBFF;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.LoginDisplay h3{
+    z-index: 100;
+    text-shadow: 2px 2px 2px #EAC9C1;
+}
+
+.LoginDisplay::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.tab-bar{
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+}
+.tab-bar p{
+    display: inline;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.tab-bar p:hover{
+    cursor: pointer;
+}
+
+.border{
+    border-bottom: 2px solid #EAC9C1;
+}
+
+.Login{
+    margin: auto;
+    margin-top: 15rem;
+    display: none;
+}
+
+.Signup{
+    margin-top: 10rem;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.Login input, .Signup input{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 50vh;
+    height: 3vh;
+    border: 1px #638475 solid;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+.Login a, .Signup a{
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    width: 47vh;
+    display: block;
+}
+
+
+
+
+
+/******************* SECOND BAR OUR GALLERY ************/
+
+.ourGallery{
+    width: 100%;
+    margin-top: 3rem; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+   
+}
+
+.ourGallery a img{
+    height: 30vh;
+    margin: auto;
+}
+
+.pageGallery{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #292f36;
+    text-shadow: 2px 2px 2px #638475;
+    
+    
+}
+
+.pageGallery h3{
+    margin: auto;
+    text-align: center;
+    width: 25%;
+    font-weight: 100;
+    border-bottom: 2px solid #638475;
+}
+
+/************* about us ***************/
+
+
+.OPeople, .Oplaces, .OProducts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-gap: 0.2rem;
+    height: 90vh;
+    
+}
+
+.OPeople , .OProducts{
+    font-size: 2rem;
+    color: #292f36;
+    text-align: center;
+}
+
+.Oplaces{
+    font-size: 2rem;
+    color: #EAC9C1;
+    text-align: center;
+}
+
+.OPeople > div img, .Oplaces > div img, .OProducts > div img{
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;;
+}
+
+.OPeople, .OProducts{
+    background-color:#EAC9C1;
+}
+
+.Oplaces{
+    background-color: #292f36;
+}
+
+
+/***************  ORDER *****************/
+
+.split{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.galleryContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Product{
+    padding: 2rem 1rem 2rem 2rem;
+    margin: 2rem;
+    border: #EBD8D0 1px solid;
+    border-radius: 2px;
+}
+
+.Product h5{
+    font-family: Montserrat;
+    font-size: 1rem;
+
+}
+
+.Products-Cart{
+    border: #EBD8D0 1px solid;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2px;
+    height: 40vh;
+}

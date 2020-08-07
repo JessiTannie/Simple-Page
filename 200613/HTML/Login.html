@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Watermelon | Login </title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a8f8f76f41.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../CSS/MainStyle.css">
+        <style>
+            body{
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="socials">
+                <a href="https://twitter.com/BTS_twt"><i class="fab fa-twitter"></i> </a>
+                <a href="#https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjj3rz30IHqAhVsRjABHaIDDk4QFjAAegQIAxAC&url=https%3A%2F%2Fwww.facebook.com%2Fbangtan.official%2F&usg=AOvVaw1wc6B_Ydi9Kqbs9Vr18vNQ"><i class="fab fa-facebook"></i> </a>
+                <a href="#"><i class="fab fa-snapchat"></i> </a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjX34Wv0YHqAhVFVzABHdMuCu8QFjAAegQIBRAB&url=https%3A%2F%2Fwww.instagram.com%2Fbts.bighitofficial%2F%3Fhl%3Den&usg=AOvVaw1vDGagxgp9IRRd_KUEHJao"><i class="fab fa-instagram"></i> </a>
+            </div>
+
+            <div class=" NameLogo">
+               <h1>Watermelon</h1> 
+            </div>
+
+            <div class="Login-Chart">
+                
+            </div>
+        </header>
+
+        <section class="LoginContainer">
+            <div class="LoginDisplay">
+                <h3> Enjoy Sweetness At Home </h3>
+            </div>
+            <div class="LoginArea">
+                <div class="tab-bar">
+                    <p class="tab border" id="btn-login"> Log In </p>
+                    <p class= "tab " id="btn-signup"> Sign Up </p>
+                </div>
+                <div>
+                    <div class="Login tab-content show" id="btn-login-content">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                        <a href="Order.html" class="btn2"> Log In</a>
+                    </div>
+                    <div class="Signup tab-content" id="btn-signup-content">
+                        <input type="text" placeholder="Full Name">
+                        <input type="date">
+                        <input type="text" placeholder="Username" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Create A Password">
+                        <input type="password" placeholder="Repeat Your Password">
+                        <a href="Order.html" class="btn2"> Log In</a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <footer>
+            <p> &copy; Copyright Jess Lovelace. All Rights Reserved </p>
+         </footer>
+ 
+        <script>
+                let buttons = document.querySelectorAll('.tab');
+                let tabContents = document.querySelectorAll('.tab-content');
+
+                function tabEvent(){
+                    removeBorder();
+                    removeShow();
+                    this.classList.add('border');
+                    const tabContentItem = document.querySelector(`#${this.id}-content`);
+                    tabContentItem.classList.add('show');
+                }
+
+                function removeBorder(){
+                    buttons.forEach(button =>{
+                        button.classList.remove('border');
+                    });
+                }
+
+                function removeShow(){
+                    tabContents.forEach(content =>{
+                        content.classList.remove('show');
+                    });
+                }
+                buttons.forEach(item =>{
+                    item.addEventListener('click', tabEvent);
+                });
+            </script>
+    </body>
